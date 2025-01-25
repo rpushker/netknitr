@@ -1,0 +1,18 @@
+Package: netknitr
+Type: Package
+Title: Build Network Map for any Dataset
+Version: 0.1.0
+Authors@R: c(person("Jayachandra", "N", email = "itsjay510@gmail.com", role = c("aut", "cre")), 
+    person("Pushker", "Ravindra", email = "pushker@gmail.com", role = c("aut")))
+Description: Provides functionality to pre-process and generate network map for any dataset. 
+Depends: R (>= 3.1.0),
+Imports: openxlsx, utils, shiny, shinydashboard
+Maintainer: Jayachandra N <itsjay510@gmail.com>
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+NeedsCompilation: no
+Packaged: 2021-02-12 12:11:20 UTC; JJJN
+Author: Jayachandra N [aut, cre],
+  Pushker Ravindra [aut]

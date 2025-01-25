@@ -1,0 +1,11 @@
+testthat::test_that('test getEdges', {
+  x <- fixNodeBias(head(mtcars[,c("cyl", "gear")]))
+  nodes <- getNodes(x, group =T)
+  association <- getAssociation(x)
+  res <- getEdges(association, nodes)
+  testthat::expect_true(is.data.frame(res))
+  testthat::expect_true(res$from[1] == 1)
+  testthat::expect_true(res$to[1] == 4)
+  testthat::expect_true(length(res) == 2)
+  testthat::expect_true(nrow(res) == 4)
+})
