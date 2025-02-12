@@ -1,0 +1,80 @@
+---
+title: "Generate network for your data"
+author: "Jayachandra N"
+date: "2025-02-12"
+output: html_document
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Are you looking to explore the complex relationships within your CSV data? The netknitr open-source framework, developed using R, RShiny, and visNetwork, makes this task simple. All you need to do is install netknitr on your computer, and you can easily generate network maps to visualize the connections within your data.
+
+```{r}
+# install.packages('netknitr')
+# netknitr::knitNet()
+```
+### Curious about how it works? Check out the step-by-step guide provided by the netknitr framework to see how it generates network maps.
+
+## Load 
+```{r}
+# install.packages('netknitr')
+library(netknitr)
+library(dplyr)
+library(visNetwork)
+```
+## Data : It works for any data
+
+```{r,attr.message=F, attr.warning=F, cache=FALSE}
+set.seed(0009)
+
+mtcars$name <- row.names(mtcars)
+cols <- c('gear', 'name', "cyl")
+my_data <- mtcars[,cols]
+my_data
+```
+
+```{r}
+res <- lapply(names(my_data), FUN = function(i) {
+  paste0(i, " : ", my_data[[i]])
+}) %>% do.call('cbind', .) %>% as.data.frame()
+names(res) <- names(my_data)
+res %>% head()
+my_data <- res
+head(my_data)
+```
+
+## Determine Nodes 
+
+```{r pressure, echo=FALSE}
+nodes <- getNodes(my_data, columns_for_nodes = cols, group = TRUE)
+nodes
+```
+
+## Can include shapes and Colors
+
+```{r}
+nodes$shape <- getShapes(nodes)
+nodes$colors <- sample(c("darkred", "grey", "orange", "darkblue", "purple", 'green'), nrow(nodes), replace = T)
+head(nodes)
+```
+
+## Determine Edges
+
+```{r}
+associations <- getAssociation(my_data[,cols])
+edges <- getEdges(associations,nodes)
+head(edges)
+```
+
+## Network
+```{r}
+visNetwork(nodes, edges) %>%
+  visNodes(color = list(background = "lightblue",
+                        border = "darkblue",
+                        highlight = "yellow"),
+           shadow = list(enabled = TRUE, size = 10))
+```
