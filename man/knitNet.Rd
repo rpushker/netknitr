@@ -13,9 +13,9 @@ shiny ui page
 knitNet
 }
 \examples{
-\dontrun{
-knitNet
-}
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+knitNet()
+\dontshow{\}) # examplesIf}
 }
 \author{
 Jayachandra N

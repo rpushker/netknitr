@@ -16,10 +16,8 @@ data.frame, content of the file.
 readMyFile
 }
 \examples{
-\dontrun{
 write.csv(mtcars, 'test_data.csv')
 readMyFile("test_data.csv")
-}
 }
 \author{
 Jayachandra N

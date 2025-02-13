@@ -1,5 +1,6 @@
 testthat::test_that("Test readMyFile", {
-  write.csv(mtcars, 'test_data.csv')
-  res <- readMyFile("test_data.csv")
+  temp_file <- tempfile(fileext = ".csv")
+  write.csv(mtcars, temp_file)
+  res <- readMyFile(temp_file)
   testthat::expect_true(is.data.frame(res))
 })

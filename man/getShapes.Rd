@@ -18,10 +18,8 @@ a vector of shapes which is ready to cbind with nodes data
 getShapes
 }
 \examples{
-\dontrun{
 nodes <- getNodes(head(mtcars), c("cyl", "gear", "vs"), group =TRUE)
 nodes$shape <- getShapes(nodes)
-}
 }
 \author{
 Jayachandra N

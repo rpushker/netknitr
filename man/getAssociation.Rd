@@ -7,7 +7,8 @@
 getAssociation(crude_data)
 }
 \arguments{
-\item{crude_data}{data frame to get associations between the values of different columns}
+\item{crude_data}{data frame to get associations between the values of
+different columns}
 }
 \value{
 data frame of edges indicating from and to nodes
@@ -16,9 +17,7 @@ data frame of edges indicating from and to nodes
 getAssociation
 }
 \examples{
-\dontrun{
 getAssociation(head(mtcars))
-}
 }
 \author{
 Jayachandra N

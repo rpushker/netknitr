@@ -18,10 +18,8 @@ data frame of edges indicationg from and to node ids
 getEdges
 }
 \examples{
-\dontrun{
 res <- fixNodeBias(head(mtcars))
-edges <- getEdges(getAssociation(res), getNodes(res, group = T))
-}
+edges <- getEdges(getAssociation(res), getNodes(res, group = TRUE))
 }
 \author{
 Jayachandra N

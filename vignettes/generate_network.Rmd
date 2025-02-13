@@ -1,9 +1,10 @@
 ---
-title: "Generate network for your data"
-author: "Jayachandra N"
-date: "2025-02-12"
-output: html_document
-always_allow_html: true
+title: "NetKnitr: an R Package to Generate Network for Your Data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{generate_network}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -66,15 +67,11 @@ head(nodes)
 
 ```{r}
 associations <- getAssociation(my_data[,cols])
-edges <- getEdges(associations,nodes)
+edges <- getEdges(associations, nodes)
 head(edges)
 ```
 
 ## Network
 ```{r}
-visNetwork(nodes, edges) %>%
-  visNodes(color = list(background = "lightblue",
-                        border = "darkblue",
-                        highlight = "yellow"),
-           shadow = list(enabled = TRUE, size = 10))
+createVisNetwork(nodes, edges)
 ```

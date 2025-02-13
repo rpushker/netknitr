@@ -16,9 +16,7 @@ data frame
 fixNodeBias
 }
 \examples{
-\dontrun{
 res <- fixNodeBias(head(mtcars))
-}
 }
 \author{
 Jayachandra N

@@ -1,18 +1,18 @@
 Package: netknitr
 Type: Package
 Title: Build Network Map for any Dataset
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Jayachandra", "N", email = "itsjay510@gmail.com", role = c("aut", "cre")), 
     person("Pushker", "Ravindra", email = "pushker@gmail.com", role = c("aut")))
-Description: an R package designed to create interactive and visually compelling network maps using RShiny. It allows users to easily analyze csv files and visualize complex relationships, structures, and connections within data by leveraging powerful network analysis libraries and dynamic web interfaces. 
+Description: It is an R package designed to create interactive and visually compelling network maps using R Shiny. It allows users to quickly analyze CSV files and visualize complex relationships, structures, and connections within data by leveraging powerful network analysis libraries and dynamic web interfaces.
 Depends: R (>= 3.1.0),
-Imports: openxlsx, utils, shiny, shinydashboard
-Maintainer: Jayachandra N <itsjay510@gmail.com>
+Imports: openxlsx, utils, shiny, shinydashboard, dplyr, visNetwork
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.3.2
-NeedsCompilation: no
-Packaged: 2021-02-12 12:11:20 UTC; JJJN
-Author: Jayachandra N [aut, cre],
-  Pushker Ravindra [aut]
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3

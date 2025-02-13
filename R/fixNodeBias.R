@@ -6,19 +6,16 @@
 #' @return data frame
 #' @export
 #' @examples
-#' \dontrun{
 #' res <- fixNodeBias(head(mtcars))
-#' }
 fixNodeBias <- function(my_data) {
 
   res <- lapply(names(my_data), FUN = function(i) {
     return(paste0(i, " : ", my_data[[i]]))
   })
 
-  res <- as.data.frame(do.call('cbind', res))
+  res <- as.data.frame(do.call("cbind", res))
 
   names(res) <- names(my_data)
 
   return(res)
 }
-
