@@ -2,7 +2,7 @@
 % Please edit documentation in R/visNetwork.R
 \name{createVisNetwork}
 \alias{createVisNetwork}
-\title{visNetwork}
+\title{createVisNetwork}
 \usage{
 createVisNetwork(
   nodes,
@@ -27,7 +27,7 @@ createVisNetwork(
 Network map visualization
 }
 \description{
-visNetwork
+createVisNetwork
 }
 \examples{
 nodes <- getNodes(head(mtcars), c("cyl", "gear", "vs"), group = TRUE)

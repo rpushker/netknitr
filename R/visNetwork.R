@@ -1,4 +1,4 @@
-#' visNetwork
+#' createVisNetwork
 #'
 #' @param nodes Nodes.
 #' @param edges Edges.

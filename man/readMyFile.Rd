@@ -16,8 +16,9 @@ data.frame, content of the file.
 readMyFile
 }
 \examples{
-write.csv(mtcars, 'test_data.csv')
-readMyFile("test_data.csv")
+temp_file <- tempfile(fileext = ".csv")
+write.csv(mtcars, temp_file)
+readMyFile(temp_file)
 }
 \author{
 Jayachandra N

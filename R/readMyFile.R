@@ -7,8 +7,9 @@
 #' @importFrom openxlsx read.xlsx
 #' @importFrom utils read.csv read.table
 #' @examples
-#' write.csv(mtcars, 'test_data.csv')
-#' readMyFile("test_data.csv")
+#' temp_file <- tempfile(fileext = ".csv")
+#' write.csv(mtcars, temp_file)
+#' readMyFile(temp_file)
 readMyFile <- function(this_file) {
   res <- strsplit(x = this_file, split = "\\.")
   unlisted_res <- unlist(res)
