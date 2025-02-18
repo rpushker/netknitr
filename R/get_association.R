@@ -3,8 +3,9 @@
 #' different columns
 #' @author Jayachandra N
 #' @description
-#' Determine the associations between the values of different columns within the input dataframe crude_data.
-#' 
+#' Determine the associations between the values of different columns within
+#' the input data frame crude_data.
+#'
 #' @return data frame of edges indicating from and to nodes
 #' @export
 #' @importFrom stats na.omit

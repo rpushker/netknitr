@@ -3,8 +3,9 @@
 #' @param nodes nodes data, output of getNodes function
 #' @param shapes character vector indicating manual shapes to choose for nodes
 #' @description
-#' Generate shapes for the given nodes, shapes can be defined using the shapes otherwise defaults to null.
-#' 
+#' Generate shapes for the given nodes, shapes can be defined using the
+#' shapes otherwise defaults to null.
+#'
 #' @author Jayachandra N
 #' @return a vector of shapes which is ready to cbind with nodes data
 #' @export

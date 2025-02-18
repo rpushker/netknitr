@@ -7,8 +7,9 @@
 #' and colors. Default value is FALSE
 #' @author Jayachandra N
 #' @description
-#' Generate nodes for the input dataframe, returns dataframe of possible nodes and it's ids for the further process
-#' 
+#' Generate nodes for the input data frame, returns data frame of possible nodes
+#' and its IDs for the further process.
+#'
 #' @return Data frame, each unique item is a node and associated with unique id
 #' @export
 #' @examples

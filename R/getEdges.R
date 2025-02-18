@@ -1,12 +1,11 @@
-
 #' getEdges
 #'
 #' @param polished_data data frame, output of getAssociation function
 #' @param nodes data frame, output of getNodes function
 #' @author Jayachandra N
 #' @description
-#' Generate edges or lines dataframe which defines the link between nodes.
-#' 
+#' Generate edges or lines data frame which defines the link between nodes.
+#'
 #' @return data frame of edges indicationg from and to node ids
 #' @export
 #' @examples

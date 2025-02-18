@@ -15,7 +15,8 @@ getShapes(nodes, shapes = NULL)
 a vector of shapes which is ready to cbind with nodes data
 }
 \description{
-Generate shapes for the given nodes, shapes can be defined using the shapes otherwise defaults to null.
+Generate shapes for the given nodes, shapes can be defined using the
+shapes otherwise defaults to null.
 }
 \examples{
 nodes <- getNodes(head(mtcars), c("cyl", "gear", "vs"), group =TRUE)

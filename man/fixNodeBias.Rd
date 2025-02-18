@@ -13,7 +13,7 @@ fixNodeBias(my_data)
 data frame
 }
 \description{
-Fix the possible bias that accurs while generating the nodes.
+Fix the possible bias that occurs while generating the nodes.
 }
 \examples{
 res <- fixNodeBias(head(mtcars))

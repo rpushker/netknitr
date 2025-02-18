@@ -1,8 +1,8 @@
 #' knitNet
 #' @author Jayachandra N
 #' @description
-#' Run inbuilt shiny app after installing the package.
-#' 
+#' Run inbuilt R shiny app.
+#'
 #' @return shiny ui page
 #' @export
 #' @import shiny
