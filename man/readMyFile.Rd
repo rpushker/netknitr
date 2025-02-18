@@ -13,7 +13,7 @@ readMyFile(this_file)
 data.frame, content of the file.
 }
 \description{
-readMyFile
+Read input files including csv, xlsx and text files in tabular format
 }
 \examples{
 temp_file <- tempfile(fileext = ".csv")

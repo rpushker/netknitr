@@ -2,6 +2,9 @@
 #'
 #' @param nodes nodes data, output of getNodes function
 #' @param shapes character vector indicating manual shapes to choose for nodes
+#' @description
+#' Generate shapes for the given nodes, shapes can be defined using the shapes otherwise defaults to null.
+#' 
 #' @author Jayachandra N
 #' @return a vector of shapes which is ready to cbind with nodes data
 #' @export
@@ -27,7 +30,7 @@ getShapes <- function(nodes, shapes = NULL) {
     }
 
     if (length(unique(nodes$group)) > length(my_shapes)) {
-      print("Note :: Number of different groups > shapes available. Shapes may be same for diferent groups")
+      message("Note :: Number of different groups > shapes available. Shapes may be same for diferent groups")
     }
     temp <- data.frame(node = unique(nodes$group),
                        shape = sample(my_shapes, length(unique(nodes$group)),
@@ -38,7 +41,7 @@ getShapes <- function(nodes, shapes = NULL) {
     })
     res <- do.call("c", res)
   } else {
-    print("There is not group column in nodes")
+    message("There is not group column in nodes")
     res <- NA
   }
   return(res)

@@ -10,7 +10,7 @@ knitNet()
 shiny ui page
 }
 \description{
-knitNet
+Run inbuilt shiny app after installing the package.
 }
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}

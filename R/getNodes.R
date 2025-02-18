@@ -6,6 +6,9 @@
 #' @param group Logical value, set TRUE to differentiate nodes by shapes
 #' and colors. Default value is FALSE
 #' @author Jayachandra N
+#' @description
+#' Generate nodes for the input dataframe, returns dataframe of possible nodes and it's ids for the further process
+#' 
 #' @return Data frame, each unique item is a node and associated with unique id
 #' @export
 #' @examples
@@ -14,7 +17,6 @@ getNodes <-  function(crude_data, columns_for_nodes = NULL, group = FALSE) {
 
   if (group == FALSE) {
     if (is.null(columns_for_nodes)) {
-      print("----Columns considerd for nodes----->")
       res <- lapply(names(crude_data), FUN = function(x) {
         print(x)
         unique(as.character(crude_data[[x]]))
@@ -22,9 +24,7 @@ getNodes <-  function(crude_data, columns_for_nodes = NULL, group = FALSE) {
       res <- do.call("c", res)
 
     } else {
-      print("----Columns considerd for nodes----->")
       res <- lapply(columns_for_nodes, FUN = function(x) {
-        print(x)
         unique(as.character(crude_data[[x]]))
       })
       res <- do.call("c", res)
@@ -33,7 +33,6 @@ getNodes <-  function(crude_data, columns_for_nodes = NULL, group = FALSE) {
     res <- data.frame(id = seq_along(res), label = res)
   } else if (group == TRUE) {
     if (is.null(columns_for_nodes)) {
-      print("----Columns considerd for nodes----->")
       res <- lapply(names(crude_data), FUN = function(x) {
         print(x)
         data.frame(label = unique(as.character(crude_data[[x]])), "group" = x)
@@ -41,9 +40,7 @@ getNodes <-  function(crude_data, columns_for_nodes = NULL, group = FALSE) {
       res <- do.call("rbind", res)
 
     } else {
-      print("----Columns considerd for nodes----->")
       res <- lapply(columns_for_nodes, FUN = function(x) {
-        print(x)
         data.frame(label = unique(as.character(crude_data[[x]])), "group" = x)
       })
       res <- do.call("rbind", res)

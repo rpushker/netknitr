@@ -2,6 +2,9 @@
 #'
 #' @param this_file File path
 #' @author Jayachandra N
+#' @description
+#' Read input files including csv, xlsx and text files in tabular format
+#' 
 #' @return data.frame, content of the file.
 #' @export
 #' @importFrom openxlsx read.xlsx

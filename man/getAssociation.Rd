@@ -14,7 +14,7 @@ different columns}
 data frame of edges indicating from and to nodes
 }
 \description{
-getAssociation
+Determine the associations between the values of different columns within the input dataframe crude_data.
 }
 \examples{
 getAssociation(head(mtcars))

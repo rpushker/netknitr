@@ -19,7 +19,7 @@ and colors. Default value is FALSE}
 Data frame, each unique item is a node and associated with unique id
 }
 \description{
-getNodes
+Generate nodes for the input dataframe, returns dataframe of possible nodes and it's ids for the further process
 }
 \examples{
 getNodes(head(mtcars), c("cyl", "gear", "vs"), group = TRUE)

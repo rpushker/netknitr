@@ -15,7 +15,7 @@ getEdges(polished_data, nodes)
 data frame of edges indicationg from and to node ids
 }
 \description{
-getEdges
+Generate edges or lines dataframe which defines the link between nodes.
 }
 \examples{
 res <- fixNodeBias(head(mtcars))

@@ -3,6 +3,9 @@
 #'
 #' @param my_data data frame
 #' @author Jayachandra N
+#' @description
+#' Fix the possible bias that accurs while generating the nodes.
+#' 
 #' @return data frame
 #' @export
 #' @examples

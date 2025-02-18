@@ -4,7 +4,7 @@ Title: Knit Network Map for any Dataset
 Version: 0.2
 Authors@R: c(person("Jayachandra", "N", email = "itsjay510@gmail.com", role = c("aut", "cre")), 
     person("Pushker", "Ravindra", email = "pushker@gmail.com", role = c("aut")))
-Description: It is an R package designed to create interactive and visually compelling network maps using R Shiny. It allows users to quickly analyze CSV files and visualize complex relationships, structures, and connections within data by leveraging powerful network analysis libraries and dynamic web interfaces.
+Description: Designed to create interactive and visually compelling network maps using R Shiny. It allows users to quickly analyze CSV files and visualize complex relationships, structures, and connections within data by leveraging powerful network analysis libraries and dynamic web interfaces.
 Depends: R (>= 3.1.0),
 Imports: openxlsx, utils, shiny, shinydashboard, dplyr, visNetwork
 License: GPL-3
